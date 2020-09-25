@@ -9,10 +9,10 @@ set rutaDestino="%PROGRAMFILES%"\"Salvador by Mori M"\%programVersion%
 
 REM echo %cd%
 REM IF "C:\Windows\system32" == %cd%  ( echo. ) ELSE ( echo  Asegurate el instaldor lo ejecutas como administrador)
-rem echo IMPORTANTE:
-rem echo Asegurate de que ejecutas este programa como administrador.
-rem echo.
-rem pause
+echo IMPORTANTE:
+echo Asegurate de que ejecutas este programa como administrador.
+echo.
+pause
 
 echo.
 
@@ -27,12 +27,11 @@ pause
 
 CLS
 echo AVISO:
-echo Ejecuta este programa como administrador.
 echo.
 echo Antes de continuar copie la carpeta Salvador V1.0
-echo a su escritorio si es que no lo está ya.
+echo a su escritorio si es que no lo esta ya.
 echo.
-echo Cuando ya esté . . .
+echo Cuando ya este . . .
 pause
 CLS
 
@@ -50,8 +49,8 @@ echo.
 echo.
 
 
-REM Intentando crear un link al escritorio público
-echo  - Creando enlace simbólico de Salvador.bat al escritorio público
+REM Intentando crear un link al escritorio publico
+echo  - Creando enlace simbolico de Salvador.bat al escritorio publico
 echo.
 echo xcopy %rutaDestino%\Salvador.lnk  /k /b
 echo.

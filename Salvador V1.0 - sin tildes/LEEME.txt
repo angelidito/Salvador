@@ -1,0 +1,10 @@
+Ejecute los programas como administrador.
+
+Primero Insatlar.bat
+
+A continuación se creará una copia 
+del programa Salvador.bat en su escritorio.
+
+Podrá usar cualquier copia del archivo 
+en cualquier ubicación mientras lo ejecute 
+como administrador.

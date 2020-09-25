@@ -7,7 +7,7 @@ mode con cols=75
 mode con lines=20
 
 REM -------------------------------------------------
-REM Ruta por defecto donde se guardarán las copias en
+REM Ruta por defecto donde se guardaran las copias en
 REM el volumen elegido \CopiasVolumenes\letraVolumen
 REM -------------------------------------------------
 set rutaDestino=CopiasVolumenes
@@ -20,7 +20,7 @@ REM -------------------------------------------------
 
 
 :setOrigen
-echo IMPORTANTE: ejecútame como ADMINISTRADOR
+echo IMPORTANTE: ejecutame como ADMINISTRADOR
 echo.
 set /p origen=Letra del volumen a copiar: 
 
@@ -36,7 +36,7 @@ REM -------- Lee la fecha ---------------------------
 REM -------------------------------------------------
 
 
-REM Comprueba si existe el directorio donde se guarda la fecha de la última copia
+REM Comprueba si existe el directorio donde se guarda la fecha de la ultima copia
 IF exist ..\Fechas\%origen%\nul (echo.) ELSE (mkdir ..\Fechas\%origen% && echo 11-11-1990 > ..\Fechas\%origen%\fechaUltimoSalvado.txt)
 
 setlocal enabledelayedexpansion
@@ -47,8 +47,8 @@ for /f "delims=" %%a in (..\Fechas\%origen%\\fechaUltimoSalvado.txt) do (
   set fechaUltimaCopia=!fechaUltimaCopia!!currentline!
 )
 
-REM Si la fecha no es la fecha por defecto dice cuándo fue la última copia.
-IF %fechaUltimaCopia% NEQ 11-11-1990 echo Última copia a fecha de %fechaUltimaCopia%
+REM Si la fecha no es la fecha por defecto dice cuando fue la ultima copia.
+IF %fechaUltimaCopia% NEQ 11-11-1990 echo Ultima copia a fecha de %fechaUltimaCopia%
 
 REM -------------------------------------------------
 REM -------------------------------------------------
@@ -66,7 +66,7 @@ set /p destino=Letra del volumen donde copiar:
 CLS
 echo.
 echo          Volumen a copiar: %origen%
-IF %fechaUltimaCopia% NEQ 11-11-1990 echo Última copia a fecha de %fechaUltimaCopia%
+IF %fechaUltimaCopia% NEQ 11-11-1990 echo Ultima copia a fecha de %fechaUltimaCopia%
 echo      Volumen donde copiar: %destino%
 echo.
 echo ?Es correcto (S/N)?
@@ -82,7 +82,7 @@ goto esCorrectoDestino
 CLS
 echo.
 echo          Volumen a copiar: %origen%
-IF %fechaUltimaCopia% NEQ 11-11-1990 echo Última copia a fecha de %fechaUltimaCopia%
+IF %fechaUltimaCopia% NEQ 11-11-1990 echo Ultima copia a fecha de %fechaUltimaCopia%
 echo      Volumen donde copiar: %destino%
 echo Ruta donde se va a copiar: %destino%:\%rutaEnDestinoCompleta%
 echo ?Es correcta la ruta de destino (S/N)?
@@ -96,7 +96,7 @@ goto setRuta
 :setRutaDestino
 echo.
 echo.
-echo Nueva ruta destino (si no existe se creará):
+echo Nueva ruta destino (si no existe se creara):
 set /p %rutaDestino%=%destino%:\
 set rutaEnDestinoCompleta=%rutaDestino%
 echo %rutaDestino%
@@ -130,10 +130,10 @@ echo.
 echo Copia realizada.
 echo.
 echo.
-echo - Si no desea guardar la fecha de éste salvado presione las
+echo - Si no desea guardar la fecha de este salvado presione las
 echo teclas "Ctrl" y "C". A continuacion presione "S" y "Enter".
 echo.
-echo - Si desea guardar la fecha de éste salvado
+echo - Si desea guardar la fecha de este salvado
 
 pause
 
@@ -164,7 +164,7 @@ echo Fecha actualizada.
 
 REM -------------------------------------------------
 REM -------------------------------------------------
-REM --------- FIN. POR FIN, JODER, YA ESTÁ ----------
+REM --------- FIN. POR FIN, JODER, YA ESTA ----------
 REM -------------------------------------------------
 REM -------------------------------------------------
 
