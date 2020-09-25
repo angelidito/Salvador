@@ -1,5 +1,4 @@
-@CHCP 850 > NUL
-
+@CHCP 65001 > NUL
 @echo off
 
 set escritorioPublico=C:\Users\Public\Desktop
