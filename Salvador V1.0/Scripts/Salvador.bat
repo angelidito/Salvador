@@ -1,4 +1,4 @@
-@CHCP 65001 > NUL
+@CHCP 850 > NUL
 @echo off
 
 REM Dimensiones y color de la ventana
@@ -55,18 +55,7 @@ REM -------------------------------------------------
 REM -------------------------------------------------
 REM -------------------------------------------------
 
-REM echo.
-REM echo ¿Es correcto (S/N)? 
-REM set /p decision=
-REM if s == %decision% goto setDestino
-REM if n == %decision% goto setOrigen
-REM echo.
-REM goto esCorrectoOrigen
 
-
-REM :setDestino
-
-echo.
 echo.
 
 set /p destino=Letra del volumen donde copiar: 
@@ -95,7 +84,6 @@ echo          Volumen a copiar: %origen%
 IF %fechaUltimaCopia% NEQ 11-11-1990 echo Última copia a fecha de %fechaUltimaCopia%
 echo      Volumen donde copiar: %destino%
 echo Ruta donde se va a copiar: %destino%:\%rutaEnDestinoCompleta%
-echo.
 echo ¿Es correcta la ruta de destino (S/N)?
 
 set /p decision=
@@ -123,14 +111,14 @@ IF exist %destino%:\%rutaEnDestinoCompleta%\nul (echo.) ELSE (echo Creando direc
 
 CLS 
 echo.
-echo WMW++++----....____X-COPIANDO____....----++++WMW
-echo.
-echo.
 echo Ejecutando comando:
-echo xcopy %origen%:\ %destino%:\%rutaEnDestinoCompleta% /s /e /h /d:%fechaUltimaCopia%/d:%fechaUltimaCopia%
+echo.
+echo xcopy %origen%:\ %destino%:\%rutaEnDestinoCompleta% /s /e /h /d:%fechaUltimaCopia%
 echo.
 echo.
-REM XCOPY en toda regla.
+REM -------------------------------------------------
+REM -------------- XCOPY en toda regla --------------
+REM -------------------------------------------------
 xCOPY      %origen%:\ %destino%:\%rutaEnDestinoCompleta% /s /e /h /d:%fechaUltimaCopia%
 
 echo.

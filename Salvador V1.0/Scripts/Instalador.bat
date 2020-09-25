@@ -1,36 +1,47 @@
-@CHCP 65001 > NUL
+@CHCP 850 > NUL
+
 @echo off
 
-set rutaDestino=C:\"Program Files"\"Salvador by Mori M"
 set escritorioPublico=C:\Users\Public\Desktop
-set paquetePrograma=..\..\"Salvador V1.0"
+set programVersion="Salvador V1.0"
 
-REM IF exist directorio\nul (echo.) ELSE (echo.)
+set rutaEnEscritorio=C:\Users\%USERNAME%\Desktop\%programVersion%
+set rutaDestino="%PROGRAMFILES%"\"Salvador by Mori M"\%programVersion%
+
+echo %cd%
+IF "C:\Windows\system32" == %cd%  ( echo. ) ELSE ( echo  Asegurate el instaldor lo ejecutas como admninistrador)
+pause
 
 echo.
 
-REM Creando	->	C:\"Program Files"\"Salvador by Mori M."
+REM Creando -> C:\Program Files\Salvador by Mori M\"Salvador V1.0"
 echo  - Creando directorio %rutaDestino%
 echo.
 echo mkdir %rutaDestino%
 echo.
 mkdir %rutaDestino%
-
-
 echo.
-echo.
-echo.
+pause
 
-
-REM Copiando de	->	..\..\"Salvador V1.0"
-REM           a	->	C:\"Program Files"\"Salvador by Mori M."
-echo  - Copiando de %paquetePrograma% a %rutaDestino%
+CLS
+echo AVISO:
 echo.
-echo xcopy %paquetePrograma% %rutaDestino% /s /e 
+echo Antes de continuar copie la carpeta Salvador V1.0
+echo a su escritorio si es que no lo está ya.
 echo.
-xcopy %paquetePrograma% %rutaDestino% /s /e 
+echo Cuando ya esté . . .
+pause
+CLS
 
+REM Copiando de	->	Escritorio\Salvador V1.0
+REM           a	->	C:\Program Files\Salvador by Mori M
+echo  - Copiando de %rutaEnEscritorio% a %rutaDestino%
+echo.
+echo xcopy %rutaEnEscritorio% %rutaDestino% /s /e 
+echo.
+xcopy %rutaEnEscritorio% %rutaDestino% /s /e 
 
+pause 
 echo.
 echo.
 echo.
@@ -39,10 +50,9 @@ echo.
 REM Intentando crear un link al escritorio público
 echo  - Creando enlace simbólico de Salvador.bat al escritorio público
 echo.
-echo xcopy %rutaDestino%\Scripts\Salvador.bat %escritorioPublico%  /k /b
+echo xcopy %rutaDestino%\Salvador.lnk  /k /b
 echo.
-xcopy %rutaDestino%\Scripts\Salvador.bat %escritorioPublico%  /k /b
-
+xcopy %rutaDestino%\Scripts\Salvador.bat %escritorioPublico% /k /b
 
 echo.
 echo.

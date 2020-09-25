@@ -1,4 +1,4 @@
-@CHCP 65001 > NUL
+@CHCP 850 > NUL
 @echo off
 
 REM Dimensiones y color de la ventana
