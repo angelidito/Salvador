@@ -1,6 +1,17 @@
 @CHCP 65001 > NUL
 @echo off
 
+
+echo AVISO:
+echo Ejecuta este programa como administrador.
+echo.
+echo Antes de continuar copie la carpeta Salvador V1.0
+echo a su escritorio si es que no lo está ya.
+echo.
+echo Cuando ya esté . . .
+pause
+CLS
+
 set escritorioPublico=C:\Users\Public\Desktop
 set programVersion="Salvador V1.0"
 
@@ -23,16 +34,6 @@ echo mkdir %rutaDestino%
 echo.
 mkdir %rutaDestino%
 echo.
-pause
-
-CLS
-echo AVISO:
-echo Ejecuta este programa como administrador.
-echo.
-echo Antes de continuar copie la carpeta Salvador V1.0
-echo a su escritorio si es que no lo está ya.
-echo.
-echo Cuando ya esté . . .
 pause
 CLS
 

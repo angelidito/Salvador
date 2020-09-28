@@ -21,6 +21,7 @@ REM -------------------------------------------------
 
 :setOrigen
 echo IMPORTANTE: ejecútame como ADMINISTRADOR
+pause
 echo.
 set /p origen=Letra del volumen a copiar: 
 
